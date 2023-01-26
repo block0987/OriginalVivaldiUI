@@ -155,3 +155,8 @@
 .page-progress-indicator::-webkit-progress-value {
     background-color: var(--colorHighlightBg);
 }
+
+/* workspace */
+.tabbar-workspace-button {
+    display: none;
+}
