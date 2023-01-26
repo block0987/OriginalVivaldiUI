@@ -1,0 +1,20 @@
+/* ブックマークページ */
+/* 背景 */
+#browser.hasfocus .manager > .toolbar, #browser.hasfocus .manager .manager-content{
+    background: var(--colorBgAlpha);
+    backdrop-filter: var(--w11-mica-filter);
+    transition: var(--w11-ease) background;
+}
+/* サイドバー */
+*:not(.panel-bookmarks-edit) > .manager-editor {
+    background: hsl(0 0% 63% / .09);
+    margin: 3px 9px;
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: var(--w11-shadow);
+}
+/* 区切り線 */
+.vivaldi-tree .separator, .vivaldi-tree .separator-left, .vivaldi-tree .separator-right {
+    border: none;
+    box-shadow: 0 0 0 0.5px hsl(0 0% 63% / .27);
+}

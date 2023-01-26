@@ -1,0 +1,81 @@
+/* 背景 */
+#panels-container:not(.switcher).overlay, #panels-container:not(.switcher).icons {
+    width: 45px !important;
+}
+#panels-container:not(.overlay), #panels-container.minimized {
+    background: var(--colorBg);
+}
+#browser.hasfocus #panels-container:not(.overlay):not(.resizing), #browser.hasfocus #panels-container.minimized {
+    background: var(--colorBgAlpha);
+    backdrop-filter: var(--w11-mica-filter);
+    transition: var(--w11-ease) background;
+}
+#panels-container.overlay .panel-group {
+    background: var(--colorBg);
+}
+#panels-container.overlay:not(.minimized) {
+    background: transparent;
+}
+.overlay:not(.minimized) #switch{
+    background: var(--colorBgAlpha);
+    backdrop-filter: var(--w11-mica-filter);
+}
+#switch, .panel-group {
+    backdrop-filter: unset;
+    padding-top: unset;
+}
+
+/* パネル全体 */
+:not(.resizing)#panels-container, :not(.resizing)#panels-container.overlay .panel-group {
+    transition: var(--w11-ease) width !important;
+}
+.resizing#panels-container {
+    transition: unset !important;
+}
+#panels-container.left:not(.overlay) .panel-group, #panels-container.left.icons .panel-group, #panels-container.left.icons.overlay, #panels-container.left.icons #switch:only-child {
+    box-shadow: unset;
+}
+
+/* スイッチバー */
+#switch {
+    margin: 3px 6px;
+    border-radius: var(--radius);
+    background: var(--colorAccentBgAlphaHeavy);
+    box-shadow: var(--w11-border), var(--w11-shadow3);
+}
+.left #switch .addwebpanel-wrapper > button, .left #switch > .button-toolbar, .left #switch > * > .button-toolbar, .left #switch > button {
+    border-radius: var(--radius);
+}
+#switch .addwebpanel-wrapper > button, #switch > .button-toolbar, #switch > * > .button-toolbar, #switch > button {
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    transition: var(--w11-ease);
+}
+
+
+/* パネル */
+.panel-group {
+    margin: 3px 6px 3px 0;
+    border-radius: var(--radius);
+    background: var(--colorAccentBgAlphaHeavy);
+    box-shadow: var(--w11-border), var(--w11-shadow3) !important;
+}
+.overlay .panel-group {
+    margin-left: 13px;
+}
+.panel-collapse-guard {
+    min-width: unset !important;
+    max-width: unset !important;
+}
+.icons .panel-group {
+    box-shadow: unset !important;
+}
+/* タイトルバー */
+#panels .webpanel-stack .webpanel .webpanel-header {
+    padding: 6px 6px 6px 12px;
+    box-shadow: var(--w11-border);
+}
+/* ページ */
+#panels-container.left #panels .webpanel-stack .webpanel .webpanel-content webview {
+    right: -1px;
+}

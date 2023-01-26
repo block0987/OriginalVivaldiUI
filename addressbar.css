@@ -1,0 +1,75 @@
+/* アドレスバー */
+/* .color-behind-tabs-off.address-bottom .toolbar-mainbar {
+    box-shadow: none;
+}
+.color-behind-tabs-off .toolbar-mainbar {
+    background: var(--colorBg)
+}
+.address-bottom .toolbar-mainbar > .button-toolbar > button:hover, .address-bottom .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover, .address-bottom .toolbar-mainbar > .button-toolbar > button:active, .address-bottom .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active {
+    box-shadow: none;
+} */
+
+/* ボタン */
+/* .color-behind-tabs-off .ExtensionIcon--Hidden:hover, .color-behind-tabs-off .ExtensionIcon--Hidden:active {
+    background: none;
+}
+.toolbar-droptarget .button-toolbar > button {
+    min-width: 30px;
+    height: 30px;
+    margin: 2px;
+    border-radius: var(--radiusHalf);
+}
+.toolbar-droptarget .button-toolbar > button:hover:not([name="FlexibleSpacer"]), .toolbar-droptarget .button-toolbar > button:active {
+    background: var(--colorAccentBgAlpha) !important;
+    box-shadow: var(--w11-button-border) !important;
+}
+.toolbar-droptarget .button-toolbar > button.button-pressed {
+    background: var(--colorAccentBg) !important;
+    box-shadow: var(--w11-button-border) !important;
+}
+button[name="FlexibleSpacer"]:hover {
+    background: transparent !important;
+    box-shadow: none !important;
+} */
+
+
+/* URLバー */
+/* .SearchField, .UrlBar-AddressField {
+    border: 1px solid transparent !important;
+    box-shadow: var(--w11-border);
+    background: transparent;
+}
+.SearchField:focus-within, .UrlBar-AddressField:focus-within {
+    border: 1px solid var(--colorHighlightBg) !important;
+    outline: none !important;
+}
+.UrlFragment-Link {
+    text-decoration: none !important;
+} */
+
+/* 拡張機能 */
+
+
+/* バッジ */
+/* .toolbar-extensions .button-badge {
+    box-shadow: none;
+    z-index: 9999;
+} */
+
+/* ポップアップ */
+/* .button-popup {
+    box-shadow: var(--w11-border), var(--w11-shadow2);
+}
+.button-popup-left.button-popup-above {
+    border-bottom-right-radius: var(--radiusHalf);
+}
+.button-popup-right.button-popup-above {
+    border-bottom-left-radius: var(--radiusHalf);
+}
+.extensionIconPopupMenu > .toolbar {
+    border-radius: var(--radiusHalf);
+}
+
+.button-popup-above.button-popup-arrow-light:before {
+    display: none;
+} */

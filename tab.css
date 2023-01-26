@@ -1,0 +1,157 @@
+/* UI非表示 */
+#header {min-height: unset !important;}
+.minimal-ui:not(.fullscreen) #header, .is-settingspage #header {min-height: 18px !important;}
+#browser:not(.tabs-top) .vivaldi {
+    height: 18px;
+}
+.minimal-ui #titlebar #pagetitle {
+    display: none;
+}
+.tabs-right#browser.win.win10 .tabs-bottom#browser.win.win10 .tabs-left#browser.win.win10, #browser.win.win10 #header #titlebar .window-buttongroup button {
+    height: 18px;
+}
+
+/* タブバー */
+#browser:not(.transparent-tabbar.color-accent-from-page.color-behind-tabs-on) #tabs-tabbar-container {
+    backdrop-filter: none;
+}
+#tabs-tabbar-container {
+    height: 60px;
+}
+.win10.normal #tabs-tabbar-container.top, #tabs-tabbar-container.top, .linux.normal #tabs-tabbar-container.top {
+    padding-top: 0;
+    padding: 0;
+}
+#browser:not(.address-top) > #header, .color-behind-tabs-off #tabs-subcontainer.top {
+    box-shadow: none;
+}
+
+.transparent-tabbar#browser.tabs-top #header {
+    background: var(--colorBg);
+    --colorImageFg: var(--colorFg);
+    --colorImageBgAlpha: var(--colorBgAlpha);
+    --colorImageBgAlphaHeavy: var(--colorBgAlphaHeavy);
+}
+.hasfocus.transparent-tabbar#browser.tabs-top #header, #browser.hasfocus.transparent-tabbar.address-top-off.tabs-off.bookmark-bar-off #header, #browser.hasfocus.transparent-tabbar.address-bottom-off.tabs-off.bookmark-bar-off #header {
+    background: var(--colorBgAlpha);
+    backdrop-filter: var(--w11-mica-filter) !important;
+    transition: var(--w11-ease) background;
+}
+
+.tabs-top.transparent-tabbar #tabs-tabbar-container {
+    --colorImageFg  : var(--colorFg);
+    --colorImageFgHeaviest: var(--colorFgAlphaHeaviest);
+    --colorImageBg: var(--colorBg);
+    --colorImageBgAlpha: var(--colorBgAlpha);
+    --colorImageBgAlphaHeavy: var(--colorBgAlphaHeavy);
+}
+.transparent-tabbar.color-behind-tabs-off.hasfocus #tabs-subcontainer {
+    background: transparent;
+    transition: var(--w11-ease) background;
+}
+
+
+/* v */
+.tabs-top.fullscreen .vivaldi, .tabs-top.maximized .vivaldi, .win10 .vivaldi {
+    height: 30px;
+}
+
+
+/* タブ */
+#browser .tab-position .tab {
+    height: 26px;
+    margin-top: 2px;
+    margin-left: 1px;
+    border-radius: var(--radiusHalf);
+}
+#browser .tab-position .tab:hover, #browser .tab-position.is-substack .tab:hover, .color-behind-tabs-off#browser .tab-position .tab.insubstrip:hover  {
+    box-shadow: var(--w11-button-border-hover), var(--w11-shadow3);
+    background: var(--colorAccentBgAlpha) !important;
+}
+#browser .tab-position .tab.active, #browser .tab-position.is-substack .tab.active, .color-behind-tabs-off#browser .tab-position .tab.active.insubstrip  {
+    box-shadow: var(--w11-button-border), var(--w11-shadow3);
+    background: var(--colorAccentBgAlphaHeavy);
+}
+#browser .tab-position.is-substack .tab{
+    background: var(--colorAccentBgAlphaHeavier);
+    box-shadow: var(--w11-border) inset;
+}
+.tab:not(.marked) .svg-tab-stack {
+    display: none;
+}
+.tab.active::before, .tab.active::after {
+    display: none;
+}
+.tab-position .tab .tab-header {
+    padding-top: 4px;
+    padding-bottom: 8px;
+}
+.tabs-top .tab-position .tab.insubstrip .tab-header, .tabs-bottom .tab-position .tab.insubstrip .tab-header {
+    margin:0;
+}
+.tab-position .tab .favicon {
+    filter: drop-shadow(1px 0 var(--w11-border)) drop-shadow(0 1px var(--w11-border)) drop-shadow(-1px 0 var(--w11-border)) drop-shadow(0 -1px var(--w11-border));
+}
+.transparent-tabbar .tab-position .tab.active .tab-header .favicon:not(.svg), .theme-dark .tab-position .tab.active .tab-header .favicon:not(.svg), .acc-dark.color-behind-tabs-off .tab-position .tab.active .tab-header .favicon:not(.svg) {
+    filter: none;
+}
+/* 選択 */
+.tabs-top .svg-tab-stack, .tabs-top .svg-tab-selection {
+    padding: 0;
+}
+.svg-tab-selection.svg-tab-stack {
+    width: calc(var(--Width) + -2px) !important;
+}
+.svg-tab-stack line, .svg-tab-selection line, .svg-tab-stack rect, .svg-tab-selection rect {
+    stroke-width: 1.5px;
+}
+.svg-tab-selection .outer {
+    display: none;
+}
+
+/* オーディオ */
+#browser:not(.alt-tabs) #tabs-container .tab-audio, #browser:not(.alt-tabs) #tabs-container .tab.pinned:not(.active) .tab-audio {
+    top: 5px;
+}
+#tabs-container .tab.tab-small.audio-on .tab-audio, #tabs-container .tab.pinned.audio-on .tab-audio, #tabs-container .tab.tab-small.audio-muted .tab-audio, #tabs-container .tab.pinned.audio-muted .tab-audio, #tabs-container .tab.tab-small.tab-captured .tab-audio, #tabs-container .tab.pinned.tab-captured .tab-audio {
+    background-color: var(--colorHighlightBg);
+}
+
+/* プログレスファビコン */
+.tab-position .tab .favicon.progress {
+    background-image: conic-gradient(var(--colorHighlightBg) var(--progressInPercent), #0009 0%);
+    animation: rotate 1s ease-in-out infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+/* ドラッグ */
+.tab-yield-space {
+    border: none;
+    box-shadow: 0 0 0 1px var(--colorHighlightBg) inset;
+}
+
+/* コントロールボタン */
+#browser.win.win10.tabs-top #header #titlebar .window-buttongroup button:not(.vivaldi) {
+    height: 30px;
+}
+#browser.win.win10 #header #titlebar .window-buttongroup button.window-close:hover {
+    background-color: #E81123;
+}
+
+/* 自動リロード */
+.page-progress-indicator {
+    left: 3px;
+    right: 3px;
+    height: 1px;
+    bottom: 6px;
+}
+.page-progress-indicator::-webkit-progress-value {
+    background-color: var(--colorHighlightBg);
+}

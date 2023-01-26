@@ -1,0 +1,125 @@
+:root {
+    --w11-selected-bg: hsla(0, 0%, 54%, .12);
+    --w11-button-border: 0 0 0 1px hsl(0 0% 100% / .01) inset, 0 1px hsl(0 0% 100% / .06) inset, 0 -1px hsl(0 0% 100% / .01) inset;
+    --w11-button-border-hover: 0 0 0 1px hsl(0 0% 100% / .01) inset, 0 1px hsl(0 0% 100% / .06) inset;
+    --w11-shadow: 0px 10px 14px 2px hsl(0 0% 0% / .24);
+    --w11-shadow2: 0px 6px 18px 3px rgba(0, 0, 0, 0.63);
+    --w11-shadow3: 0px 0px 6px 0px hsl(0 0% 0% / .09);
+    --w11-border: 0 0 0 .5px hsl(0 0% 63% / .27);
+    --w11-mica-filter: blur(120px) saturate(2.1);
+    --w11-ease: cubic-bezier(0, 0, 0, 1) 0.36s;
+    --w11-mica-blend: multiply;
+}
+
+:focus {
+    outline: none;
+}
+
+* {
+    font-family: 'Roboto', 'Noto Sans CJK JP' !important;
+    font-feature-settings: "palt" 1;
+    letter-spacing: -0.027em;
+    font-weight: 500;
+}
+
+.address-bottom #tabs-tabbar-container.top,
+.address-bottom-off #tabs-tabbar-container.top,
+.address-top-off #tabs-tabbar-container.top {
+    border-bottom-width: 0;
+}
+
+/* タイル表示 */
+#webview-container:has(#webpage-stack .mosaic.visible) {
+    padding: unset;
+    box-shadow: inset 0 0 0 100vh var(--colorBg);
+}
+
+.hasfocus #webview-container:has(#webpage-stack .mosaic.visible) {
+    transition: var(--w11-ease) box-shadow;
+    box-shadow: inset 0 0 0 100vh var(--colorBgAlpha);
+    backdrop-filter: var(--w11-mica-filter);
+}
+
+.mosaic-split .mosaic-split-line {
+    background-color: unset;
+}
+
+.mosaic-split .mosaic-split-line:before,
+.mosaic-split .mosaic-split-line:after {
+    display: none;
+}
+
+.mosaic-tile {
+    margin: 3px;
+}
+
+.mosaic-tile>.webpageview.tiled>.row-wrapper {
+    box-shadow: var(--w11-border);
+    border-radius: var(--radius);
+    transition: cubic-bezier(0, 0, 0, 1) 0.36s box-shadow;
+}
+
+.hasfocus .mosaic-tile:has(.active)>.webpageview.tiled>.row-wrapper {
+    box-shadow: 0 0 0 1.5px var(--colorHighlightBg), var(--w11-shadow);
+}
+
+.tiled.webpageview:not(.active),
+.isblurred .tiled.webpageview.active,
+.hasfocus .tiled.webpageview.active {
+    box-shadow: unset;
+}
+
+/* ページ内検索(タイル表示) */
+.tiled>.find-in-page-wrapper {
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: var(--w11-border), var(--w11-shadow);
+    background-color: var(--colorBgAlpha);
+    margin-bottom: 3px;
+}
+
+/* モーダル */
+#modal-bg.slide {
+    top: 27vh;
+    border-radius: var(--radius);
+}
+
+#modal-bg.slide>div {
+    animation: cardslide 180ms cubic-bezier(0, 0, 0, 1);
+    background-color: var(--colorBgAlpha);
+    backdrop-filter: var(--w11-mica-filter);
+    border-radius: var(--radius);
+    box-shadow: var(--w11-border), var(--w11-shadow2);
+}
+
+.dialog-download {
+    background-color: transparent;
+}
+
+.dialog-footer {
+    background: transparent;
+    border-top: none;
+}
+
+@keyframes cardslide {
+    0% {
+        transform: perspective(90px) translate3d(0, 81%, -90px);
+    }
+
+    63% {
+        transform: perspective(90px) translate3d(0, 0, 0);
+    }
+}
+
+/* 順序変更 */
+#header {
+    order: 0;
+}
+
+#main {
+    order: 1;
+}
+
+footer {
+    order: 2;
+}

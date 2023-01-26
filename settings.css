@@ -1,0 +1,40 @@
+/* 背景 */
+.transparent-tabbar .vivaldi-settings {
+    background: var(--colorBgAlpha);
+    backdrop-filter: var(--w11-mica-filter);
+    transition: var(--w11-ease) background;
+}
+.transparent-tabbar.hasfocus .vivaldi-settings .settings-content {
+    background: transparent;
+}
+.transparent-tabbar.hasfocus .vivaldi-settings .settings-sidebar {
+    background: hsla(0, 0%, 6%, .12);
+}
+
+/* ヘッダー */
+#browser:not(.tabs-top).transparent-tabbar.hasfocus #header {
+    background: var(--colorBgAlpha);
+    backdrop-filter: var(--w11-mica-filter);
+    transition: var(--w11-ease) background;
+}
+.is-settingspage:not(.fullscreen) .vivaldi-settings .settings-header {
+    display: none;
+}
+
+/* サイドバー */
+.vivaldi-settings .settings-sidebar {
+    box-shadow: none;
+}
+.vivaldi-settings .settings-sidebar .settings-navigation {
+    margin: 9px;
+}
+.vivaldi-settings .settings-sidebar .settings-navigation:focus-within .tree-row[data-selected] .button-category:not(:active) {
+    outline: none;
+}
+.vivaldi-settings .settings-sidebar .button-category {
+    border-radius: var(--radiusHalf);
+    border:none;
+}
+.vivaldi-settings .settings-sidebar .button-category:hover, .vivaldi-settings .settings-sidebar .button-category.category-selected {
+    background: var(--w11-selected-bg);
+}

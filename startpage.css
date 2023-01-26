@@ -1,0 +1,78 @@
+/* 現在のページ - micaスタイルデザイン */
+button.button-startpage:focus, button.button-startpage.active {
+    border-color: #0000;
+}
+button.button-startpage::before {
+    content: "";
+    width: 40%;
+    height: 3px;
+    background-color: var(--colorHighlightBg);
+    position: absolute;
+    left: 30%;
+    top: 81%;
+    border-radius: 1.5px;
+    transform: scaleX(0);
+    transition: var(--w11-ease);
+    z-index: 3;
+}
+button.button-startpage:focus:before, button.button-startpage.active:before {
+    transform: scaleX(1);
+    transition: var(--w11-ease);
+}
+
+/* ナビゲーションバー */
+.startpage .startpage-navigation {
+    background-color: var(--colorBg);
+    box-shadow: var(--w11-border);
+}
+.transparent-tabbar.hasfocus .startpage .startpage-navigation {
+    background-color: var(--colorBgAlpha);
+    backdrop-filter: var(--w11-mica-filter);
+    transition: var(--w11-ease) background;
+}
+.startpage .startpage-navigation .startpage-navigation-group:last-of-type {
+    border: none;
+    box-shadow: none;
+}
+
+/* ダイアル */
+.speeddial .dial {
+    background: var(--colorBgLight);
+    box-shadow: var(--w11-border), var(--w11-shadow);
+}
+.speeddial .dial:hover{
+    transition: var(--w11-ease);
+    background: var(--colorBgLighter);
+    box-shadow: var(--w11-border);
+    margin-top: 0 !important;
+}
+.speeddial .dial > .thumbnail-title.hidden {
+    background: var(--colorBgLight);
+    transition: var(--w11-ease);
+}
+.speeddial .dial:focus {
+    outline: 0;
+}
+.speeddial .dial.dragging {
+    opacity: 1 !important;
+    box-shadow: var(--w11-border), var(--w11-shadow2);
+}
+.speeddial .dial.dragover:hover {
+    background: var(--colorBg);
+}
+.speeddial .dial.dragover:hover .thumbnail-image {
+    transform: scale(0.6);
+    transition: var(--w11-ease);
+}
+
+.speeddial .dial > .thumbnail-title {
+    justify-content: center;
+}
+.dials .dial .editable-title-container {
+    display: flex;
+}
+
+.speeddial .dial .thumbnail-image img {
+    object-fit: contain;
+    object-position: center;
+}
