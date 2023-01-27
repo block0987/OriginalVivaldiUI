@@ -30,28 +30,36 @@
 }
 
 /* URLバー */
-.UrlBar-AddressField {
+.SearchField, .UrlBar-AddressField {
     background: transparent;
-    border: none !important;
+    border: unset !important;
     box-shadow: var(--w11-border);
-    padding-top: 1px;
+    margin: 0 6px;
+    padding: 0 2px;
+    border-radius: var(--radiusHalf);
+}
+.toolbar-medium .SearchField, .toolbar-medium .UrlBar-AddressField {
+    max-height: 22px;
+}
+.toolbar-medium .SearchField .UrlFragment-Wrapper, .toolbar-medium .UrlBar-AddressField .UrlFragment-Wrapper {
+    padding-top: 6px;
 }
 .UrlBar-AddressField:focus-within {
-    outline: none !important;
+    outline: unset !important;
     box-shadow: 0 0 0 1px var(--colorHighlightBg) inset;
 }
 /* URLバー - ボタン */
 .UrlBar-AddressField .button-toolbar, .BookmarkButton {
-    margin: 0 2px;
-    height: 19px !important;
+    margin: 0;
+    height: 20px !important;
 }
 .UrlBar-AddressField .button-toolbar button, .BookmarkButton{
-    border: none;
+    border: unset;
 }
 
 /* ボタン */
 .ExtensionIcon, .toolbar-statusbar .button-toolbar:not(.toolbar-spacer-flexible) {
-    padding: 0 1px;
+    padding: 0 .5px;
     height: 22px;
     border: none;
     border-radius: var(--radiusHalf);
