@@ -34,7 +34,7 @@
     background: transparent;
     border: unset !important;
     box-shadow: var(--w11-border);
-    margin: 0 6px;
+    margin: 0 3px;
     padding: 0 2px;
     border-radius: var(--radiusHalf);
 }

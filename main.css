@@ -6,7 +6,7 @@
     --w11-shadow2: 0px 6px 18px 3px rgba(0, 0, 0, 0.63);
     --w11-shadow3: 0px 0px 6px 0px hsl(0 0% 0% / .09);
     --w11-border: 0 0 0 .5px hsl(0 0% 63% / .27);
-    --w11-mica-filter: blur(120px) saturate(2.1);
+    --w11-mica-filter: blur(120px) saturate(2.4);
     --w11-ease: cubic-bezier(0, 0, 0, 1) 0.36s;
     --w11-mica-blend: multiply;
 }

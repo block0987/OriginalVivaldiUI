@@ -1,7 +1,9 @@
 /* 現在のページ - micaスタイルデザイン */
-button.button-startpage:focus, button.button-startpage.active {
+button.button-startpage:focus,
+button.button-startpage.active {
     border-color: #0000;
 }
+
 button.button-startpage::before {
     content: "";
     width: 40%;
@@ -15,7 +17,9 @@ button.button-startpage::before {
     transition: var(--w11-ease);
     z-index: 3;
 }
-button.button-startpage:focus:before, button.button-startpage.active:before {
+
+button.button-startpage:focus:before,
+button.button-startpage.active:before {
     transform: scaleX(1);
     transition: var(--w11-ease);
 }
@@ -25,11 +29,13 @@ button.button-startpage:focus:before, button.button-startpage.active:before {
     background-color: var(--colorBg);
     box-shadow: var(--w11-border);
 }
+
 .transparent-tabbar.hasfocus .startpage .startpage-navigation {
     background-color: var(--colorBgAlpha);
     backdrop-filter: var(--w11-mica-filter);
     transition: var(--w11-ease) background;
 }
+
 .startpage .startpage-navigation .startpage-navigation-group:last-of-type {
     border: none;
     box-shadow: none;
@@ -40,34 +46,41 @@ button.button-startpage:focus:before, button.button-startpage.active:before {
     background: var(--colorBgLight);
     box-shadow: var(--w11-border), var(--w11-shadow);
 }
-.speeddial .dial:hover{
+
+.dials-wrapper:not(.dragging-disabled) .speeddial .dial:hover {
     transition: var(--w11-ease);
     background: var(--colorBgLighter);
     box-shadow: var(--w11-border);
     margin-top: 0 !important;
 }
-.speeddial .dial > .thumbnail-title.hidden {
+
+.speeddial .dial>.thumbnail-title.hidden {
     background: var(--colorBgLight);
     transition: var(--w11-ease);
 }
+
 .speeddial .dial:focus {
     outline: 0;
 }
+
 .speeddial .dial.dragging {
     opacity: 1 !important;
     box-shadow: var(--w11-border), var(--w11-shadow2);
 }
+
 .speeddial .dial.dragover:hover {
     background: var(--colorBg);
 }
+
 .speeddial .dial.dragover:hover .thumbnail-image {
     transform: scale(0.6);
     transition: var(--w11-ease);
 }
 
-.speeddial .dial > .thumbnail-title {
+.speeddial .dial>.thumbnail-title {
     justify-content: center;
 }
+
 .dials .dial .editable-title-container {
     display: flex;
 }

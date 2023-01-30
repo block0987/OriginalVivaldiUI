@@ -39,12 +39,12 @@
 /* スイッチバー */
 #switch {
     margin: 3px 6px;
-    border-radius: var(--radius);
+    border-radius: var(--radiusHalf);
     background: var(--colorAccentBgAlphaHeavy);
     box-shadow: var(--w11-border), var(--w11-shadow3);
 }
 .left #switch .addwebpanel-wrapper > button, .left #switch > .button-toolbar, .left #switch > * > .button-toolbar, .left #switch > button {
-    border-radius: var(--radius);
+    border-radius: var(--radiusHalf);
 }
 #switch .addwebpanel-wrapper > button, #switch > .button-toolbar, #switch > * > .button-toolbar, #switch > button {
     border-top: 6px solid transparent;
@@ -56,7 +56,7 @@
 /* パネル */
 .panel-group {
     margin: 3px 6px 3px 0;
-    border-radius: var(--radius);
+    border-radius: var(--radiusHalf);
     background: var(--colorAccentBgAlphaHeavy);
     box-shadow: var(--w11-border), var(--w11-shadow3) !important;
 }
